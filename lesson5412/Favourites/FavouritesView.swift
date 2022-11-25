@@ -17,7 +17,7 @@ class FavouritesView: UIViewController {
         let tableView = UITableView()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "fav_cell")
         tableView.dataSource = self
-        //tableView.delegate = self
+        tableView.delegate = self
         return tableView
         
     }()
@@ -52,6 +52,19 @@ extension FavouritesView: UITableViewDataSource {
         cell.textLabel?.text = controller.getFavouritesBeers()[indexPath.row].name
         return cell
     }
+}
+
+extension FavouritesView: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            controller.deleteFavouriteBeer(index: indexPath.row)
+            favoritesTableView.reloadData()
+        }
+    }
 }

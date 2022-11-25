@@ -29,6 +29,10 @@ class FavouritesController {
         return favouriteBeers!
     }
     
+    func deleteFavouriteBeer(index: Int) {
+        model?.deleteFavouriteBeer(index: index)
+    }
+    
     func updateFavourites() {
         model?.getFavourites()
     }

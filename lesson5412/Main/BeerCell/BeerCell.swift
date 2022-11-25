@@ -51,7 +51,11 @@ class BeerCell: UITableViewCell {
     }
     
     @objc func addFavoritesTap() {
-        controller.addFavourite(title: beerNameLabel.text!)
+        if controller.addFavourite(title: beerNameLabel.text!) {
+            likeImageView.image = UIImage(systemName: "heart.fill")
+        } else {
+            likeImageView.image = UIImage(systemName: "heart")
+        }
     }
 }
 

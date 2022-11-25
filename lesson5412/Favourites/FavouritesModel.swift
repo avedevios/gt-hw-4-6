@@ -21,6 +21,11 @@ class FavouritesModel {
     func getFavourites() {
         controller.setFavourites(beers: database.getData())
     }
+    
+    func deleteFavouriteBeer(index: Int) {
+        let beers = database.getData()
+        database.deleteData(beer: beers[index])
+    }
 }
 
 class BeerRealm: Object {

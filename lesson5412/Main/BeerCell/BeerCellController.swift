@@ -17,7 +17,9 @@ class BeerCellController {
         self.model = BeerCellModel(controller: self)
     }
     
-    func addFavourite(title: String) {
-        model?.addFavourite(title: title)
+    func addFavourite(title: String) -> Bool {
+        let result = model?.addFavourite(title: title)
+        
+        return result == nil ? false : result!
     }
 }

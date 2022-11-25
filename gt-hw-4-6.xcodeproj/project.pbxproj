@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		388F51CC81AE986EF1D8075C /* Pods_lesson5412.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lesson5412.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D4ECBC9291FEA100023FB6E /* lesson5412.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lesson5412.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D4ECBC9291FEA100023FB6E /* gt-hw-4-6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gt-hw-4-6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D4ECBCC291FEA100023FB6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D4ECBCE291FEA100023FB6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6D4ECBD0291FEA100023FB6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		6D4ECBCA291FEA100023FB6E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6D4ECBC9291FEA100023FB6E /* lesson5412.app */,
+				6D4ECBC9291FEA100023FB6E /* gt-hw-4-6.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,9 +183,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6D4ECBC8291FEA100023FB6E /* lesson5412 */ = {
+		6D4ECBC8291FEA100023FB6E /* gt-hw-4-6 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6D4ECBDD291FEA180023FB6E /* Build configuration list for PBXNativeTarget "lesson5412" */;
+			buildConfigurationList = 6D4ECBDD291FEA180023FB6E /* Build configuration list for PBXNativeTarget "gt-hw-4-6" */;
 			buildPhases = (
 				5B816D34E5EF52F4B4E9FB22 /* [CP] Check Pods Manifest.lock */,
 				6D4ECBC5291FEA100023FB6E /* Sources */,
@@ -197,9 +197,9 @@
 			);
 			dependencies = (
 			);
-			name = lesson5412;
+			name = "gt-hw-4-6";
 			productName = lesson5412;
-			productReference = 6D4ECBC9291FEA100023FB6E /* lesson5412.app */;
+			productReference = 6D4ECBC9291FEA100023FB6E /* gt-hw-4-6.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -217,7 +217,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6D4ECBC4291FEA100023FB6E /* Build configuration list for PBXProject "lesson5412" */;
+			buildConfigurationList = 6D4ECBC4291FEA100023FB6E /* Build configuration list for PBXProject "gt-hw-4-6" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -230,7 +230,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6D4ECBC8291FEA100023FB6E /* lesson5412 */,
+				6D4ECBC8291FEA100023FB6E /* gt-hw-4-6 */,
 			);
 		};
 /* End PBXProject section */
@@ -509,7 +509,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6D4ECBC4291FEA100023FB6E /* Build configuration list for PBXProject "lesson5412" */ = {
+		6D4ECBC4291FEA100023FB6E /* Build configuration list for PBXProject "gt-hw-4-6" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6D4ECBDB291FEA180023FB6E /* Debug */,
@@ -518,7 +518,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6D4ECBDD291FEA180023FB6E /* Build configuration list for PBXNativeTarget "lesson5412" */ = {
+		6D4ECBDD291FEA180023FB6E /* Build configuration list for PBXNativeTarget "gt-hw-4-6" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6D4ECBDE291FEA180023FB6E /* Debug */,

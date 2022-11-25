@@ -24,4 +24,10 @@ class DatabaseManager {
             realm.add(beer)
         })
     }
+    
+    func deleteData(beer: BeerRealm) {
+        try! realm.write( {
+            realm.delete(beer)
+        })
+    }
 }
