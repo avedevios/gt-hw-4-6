@@ -23,7 +23,7 @@ class FavouritesView: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         self.controller = FavouritesController(view: self)
 
         controller.updateFavourites()
@@ -32,6 +32,12 @@ class FavouritesView: UIViewController {
     }
     
     func setupSubviews() {
+        self.title = "Favourites"
+        
+        view.backgroundColor = .orange
+        favoritesTableView.backgroundColor = .orange
+        favoritesTableView.separatorStyle = .none
+        
         view.addSubview(favoritesTableView)
         favoritesTableView.snp.makeConstraints { make in
             make.top.equalToSuperview()
@@ -49,12 +55,17 @@ extension FavouritesView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fav_cell", for: indexPath)
+        cell.backgroundColor = .orange
         cell.textLabel?.text = controller.getFavouritesBeers()[indexPath.row].name
         return cell
     }
 }
 
 extension FavouritesView: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75
+    }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true

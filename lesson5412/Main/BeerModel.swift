@@ -27,4 +27,5 @@ class BeerModel {
 
 struct Beer: Codable {
     var name: String
+    var image_url: String
 }

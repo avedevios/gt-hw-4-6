@@ -15,6 +15,11 @@ class BeerCell: UITableViewCell {
     
     let realm = try! Realm()
     
+    lazy var beerImageView: UIImageView = {
+        let imageView = UIImageView()
+        return imageView
+    }()
+
     lazy var beerNameLabel: UILabel = {
         let label = UILabel()
         return label
@@ -22,7 +27,7 @@ class BeerCell: UITableViewCell {
     
     lazy var likeImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "heart")
+        imageView.image = UIImage(systemName: "suit.heart")
         imageView.isUserInteractionEnabled = true
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(addFavoritesTap))
@@ -35,26 +40,38 @@ class BeerCell: UITableViewCell {
         
         controller = BeerCellController(view: self)
         
-        addSubview(beerNameLabel)
-        beerNameLabel.snp.makeConstraints { make in
+        backgroundColor = .orange
+        
+        addSubview(beerImageView)
+        beerImageView.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.left.equalToSuperview().offset(20)
-            make.width.equalTo(250)
+            make.width.equalTo(30)
+            make.height.equalTo(50)
         }
         
         addSubview(likeImageView)
         likeImageView.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
+            //make.left.equalTo(beerNameLabel.snp.right).offset(10)
             make.right.equalToSuperview().offset(-20)
-            make.height.width.equalTo(50)
+            make.width.equalTo(50)
+            make.height.equalTo(50)
+        }
+        
+        addSubview(beerNameLabel)
+        beerNameLabel.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.left.equalTo(beerImageView.snp.right).offset(10)
+            make.right.equalTo(likeImageView.snp.left).offset(-10)
         }
     }
     
     @objc func addFavoritesTap() {
         if controller.addFavourite(title: beerNameLabel.text!) {
-            likeImageView.image = UIImage(systemName: "heart.fill")
+            likeImageView.image = UIImage(systemName: "suit.heart.fill")
         } else {
-            likeImageView.image = UIImage(systemName: "heart")
+            likeImageView.image = UIImage(systemName: "suit.heart")
         }
     }
 }
